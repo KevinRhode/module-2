@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What happens when we set the display property to flex? 
+TODO: Write your answer here 
+it sets the nav bar to contain flex items
+*/
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 
+What is the flex-wrap property? 
+TODO: Write your answer here 
+the flex-wrap property sets the behavior of the flex item;
+nowrap: default all flex items will be on one line
+wrap: flex items will wrap onto multiple lines, from top to bottom
+wrap-reverse: flex items will wrap onto muliple lines from bottom to top
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do? 
+TODO: Write your answer here 
+how the brower distributes space between and around content items along the main-axis of a flex 
+container, and the inline axis of a grid container
+
+*/
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+sets how a flex item will grow or shrink to fit the space available in its flex container
+What is it doing here? 
+Three values: flex-grow | flex-shrink | flex-basis
+default values of grow and shrink
+set intial size of 400px of the flex item
+TODO: Write your answer here 
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+What does the flex-direction property define?
+sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
+What is it doing here? 
+changing the nav bar to be horizontal 
+TODO: Write your answer here 
+*/
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
